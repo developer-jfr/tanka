@@ -2,7 +2,7 @@
   local container = $.core.v1.container,
   local containerPort = $.core.v1.containerPort,
   echo_container::
-    container.new('echo', 'nginxinc/nginx-unprivileged') +
+    container.new('echo', 'nginx') +
     container.withPorts(containerPort.new('http', 8080)),
 
   local deployment = $.apps.v1.deployment,
