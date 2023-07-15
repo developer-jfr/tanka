@@ -2,7 +2,7 @@
   local container = $.core.v1.container,
   local containerPort = $.core.v1.containerPort,
   echo_container::
-    container.new('echo', 'k8s.gcr.io/echoserver:1.4') +
+    container.new('echo', 'nginxinc/nginx-unprivileged') +
     container.withPorts(containerPort.new('http', 8080)),
 
   local deployment = $.apps.v1.deployment,
